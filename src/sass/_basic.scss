@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-grid {
+    --breakout-size: calc((var(--template-breakout-max-width) - var(--template-max-width)) / 2);
+
+    display: grid;
+    grid-template-columns: [full-width-start] minmax(var(--template-padding), 1fr) [breakout-start] minmax(0, var(--breakout-size)) [content-start] min(100% - (var(--template-padding) * 2), var(--template-max-width)) [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(var(--template-padding), 1fr) [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+    grid-column: content;
+}
+
+.content-grid > .breakout {
+    grid-column: breakout;
+}
+
+.content-grid > .full-width {
+    grid-column: full-width;
+    display: grid;
+    grid-template-columns: inherit;
+}
