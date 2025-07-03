@@ -1,0 +1,6 @@
+<svg width="46.707275" height="37.975586" viewBox="0 0 46.7073 37.9756" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<path class="icon-mute_accent" d="M46 23.99L36.96 14.96" stroke="#EE364A" stroke-opacity="1.000000" stroke-width="2.000000"/>
+	<path class="icon-mute_base" d="M6 10.67C2.68 10.67 0 13.36 0 16.67L0 21.25C0 24.57 2.68 27.25 6 27.25L14.78 27.25L14.78 10.67L6 10.67ZM12.78 12.67L6 12.67Q5.52 12.67 5.07 12.78Q4.75 12.85 4.44 12.99Q4.11 13.12 3.82 13.31Q3.47 13.54 3.17 13.84Q2.86 14.15 2.64 14.5Q2.45 14.79 2.31 15.12Q2.18 15.43 2.1 15.75Q2 16.2 2 16.67L2 21.25Q2 21.73 2.1 22.18Q2.18 22.5 2.31 22.81Q2.45 23.14 2.64 23.43Q2.86 23.78 3.17 24.08Q3.47 24.39 3.82 24.61Q4.11 24.8 4.44 24.94Q4.75 25.07 5.07 25.15Q5.52 25.25 6 25.25L12.78 25.25L12.78 12.67Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<path class="icon-mute_base" d="M30.39 35.91L30.39 2.02L18.89 10.84L18.89 26.81L30.39 35.91Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000"/>
+	<path class="icon-mute_accent" d="M36.96 23.99L46 14.96" stroke="#EE364A" stroke-opacity="1.000000" stroke-width="2.000000"/>
+</svg>
