@@ -1,2 +1,2 @@
-!function(){"use strict"}();
+!function(){"use strict";const t=document.querySelectorAll(".js-animate-number");let e=!1;const n=new IntersectionObserver((n,r)=>{n.forEach(n=>{n.isIntersecting&&!e&&(t.forEach(t=>{((t,e)=>{const n=performance.now(),r=e.toString().length,o=a=>{const s=a-n,c=Math.min(s/1e3,1),i=Math.floor(c*e);t.textContent=String(i).padStart(r,"0"),c<1?requestAnimationFrame(o):t.textContent=String(e).padStart(r,"0")};requestAnimationFrame(o)})(t,parseInt(t.getAttribute("data-target"),10))}),e=!0,r.disconnect())})},{threshold:.5});t.forEach(t=>n.observe(t))}();
 //# sourceMappingURL=main.js.map

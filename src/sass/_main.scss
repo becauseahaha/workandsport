@@ -1,22 +1,24 @@
 $container-max-widths: (
-    sm: 600px,
-    md: 800px,
-    lg: 1000px,
+    sm: 350px,
+    md: 350px,
+    lg: 700px,
     xl: 1159px,
     xxl: 1276px
 );
 
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables"; 
-@import "node_modules/bootstrap/scss/maps";
-@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/bootstrap";
 
-@import "node_modules/bootstrap/scss/utilities";
-@import "node_modules/bootstrap/scss/utilities/api";
+// @import "node_modules/bootstrap/scss/functions";
+// @import "node_modules/bootstrap/scss/variables"; 
+// @import "node_modules/bootstrap/scss/maps";
+// @import "node_modules/bootstrap/scss/mixins";
 
-@import "node_modules/bootstrap/scss/reboot"; 
-@import "node_modules/bootstrap/scss/containers"; 
-@import "node_modules/bootstrap/scss/grid";
+// @import "node_modules/bootstrap/scss/utilities";
+// @import "node_modules/bootstrap/scss/utilities/api";
+
+// @import "node_modules/bootstrap/scss/reboot"; 
+// @import "node_modules/bootstrap/scss/containers"; 
+// @import "node_modules/bootstrap/scss/grid";
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
@@ -27,6 +29,10 @@ $container-max-widths: (
 .row>* {
     padding-left: 0;
     padding-right: 0;
+}
+
+html {
+    border: none !important;
 }
 
 body {
@@ -40,6 +46,10 @@ body {
 
 b {
     font-weight: 600;
+}
+
+a {
+    color: inherit;
 }
 
 .input {
@@ -99,10 +109,13 @@ b {
         display: flex;
         flex-direction: row;
         gap: 20px;
-        &--button {
-            margin-top: 40px;
+        &--mb {
+            margin-bottom: 20px;
         }
     }
+}
+.form__title.text-center {
+    justify-content: center;
 }
 
 .logo {
@@ -119,6 +132,7 @@ b {
     font-size: 2.5rem;
     line-height: 1;
     font-weight: 600;
+    margin-bottom: 0;
 }
 
 .header {
@@ -133,6 +147,17 @@ b {
 
     &__logo {
     }
+    &__burger {
+        width: 32px;
+        height: 30px;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+        color: #797979;
+        &:hover {
+            color: var(--color-main);
+        }
+    }
 }
 
 .nav {
@@ -140,6 +165,7 @@ b {
     gap: 40px;
     &__link {
         text-decoration: none;
+        color: inherit;
         &:hover {
             opacity: 0.5;
         }
@@ -655,6 +681,34 @@ b {
             &:hover {
                 opacity: 1;
             }
+        }
+    }
+}
+
+
+.popup {
+    position: relative;
+    border-radius: 20px;
+    background: rgb(28, 28, 28);
+    padding: 100px;
+    color: var(--color-main);
+    &__close {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1;
+        width: 52px;
+        height: 52px;
+        color: var(--color-accent);
+        &:hover {
+            color: var(--color-accent-active);
+        }
+        &-icon {
+            width: 100%;
+            height: 100%;
         }
     }
 }

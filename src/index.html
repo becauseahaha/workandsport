@@ -16,7 +16,14 @@
             <g id="icon-arrow-2" fill="currentColor">
                 <path d="M43.58 7.66L39.63 11.61C39.24 12 39.24 12.62 39.63 13.02C40.03 13.42 40.65 13.42 41.05 13.02L46.7 7.36C47.1 6.97 47.1 6.34 46.7 5.95L41.05 0.29C40.65 -0.1 40.03 -0.1 39.63 0.29C39.24 0.69 39.24 1.31 39.63 1.71L43.58 5.66L0 5.66L0 7.66L43.58 7.66Z" fill-rule="evenodd"/>
             </g>
-            <g id="icon-mute">
+            <g id="icon-close">
+                <path d="M50.76 47.46L3.06 1.46" stroke="currentColor" stroke-width="4.000000"/>
+                <path d="M1.36 47.46L50.77 1.46" stroke="currentColor" stroke-width="4.000000"/>
+            </g>
+            <g id="icon-burger">
+                <path d="M0 1L32.51 1" stroke="currentColor" stroke-width="2.000000"/>
+                <path d="M0 29L32.51 29" stroke="currentColor" stroke-width="2.000000"/>
+                <path d="M0 15L32.51 15" stroke="currentColor" stroke-width="2.000000"/>
             </g>
         </defs>
     </svg>
@@ -26,7 +33,7 @@
                 <div class="col-auto">
                     <a href=""><img class="header__logo logo" src="images/logo.svg" alt="Logo"></a>
                 </div>
-                <div class="col-auto">
+                <div class="col-auto d-none d-xl-block">
                     <nav class="header__nav nav">
                         <a href="#" class="nav__link">О нас</a>
                         <a href="#" class="nav__link">Услуги</a>
@@ -34,8 +41,11 @@
                         <a href="#" class="nav__link">Контакты</a>
                     </nav>
                 </div>
-                <div class="col-auto">
-                    <button class="header__request button">Оставить заявку</button>
+                <div class="col-auto d-none d-xl-block">
+                    <button class="header__request button" data-bs-toggle="modal" data-bs-target="#modal-contact">Оставить заявку</button>
+                </div>
+                <div class="col-auto d-block d-xl-none">
+                    <button class="header__burger"><svg width="32" height="30" viewBox="0 0 32.5137 30.0002"><use href="#icon-burger"></use></svg></button>
                 </div>
             </div>
         </div>
@@ -170,20 +180,20 @@
             <section class="stats">
                 <div class="stats__grid row justify-content-between">
                     <div class="stats-item col-auto">
-                        <span class="stats-item__number">12</span>
+                        <span class="stats-item__number js-animate-number" data-target="12">0</span>
                         <span class="stats-item__label">лет на рынке</span>
                     </div>
                     <div class="stats-item col-auto">
-                        <span class="stats-item__number">700+</span>
+                        <span class="stats-item__number"><span class="js-animate-number" data-target="700" data-plus="true">0</span>+</span>
                         <span class="stats-item__label">проектов</span>
                     </div>
                     <div class="stats-item col-auto">
-                        <span class="stats-item__number">500+</span>
+                        <span class="stats-item__number"><span class="js-animate-number" data-target="500" data-plus="true">0</span>+</span>
                         <span class="stats-item__label">компаний</span>
                     </div>
                 </div>
                 <div class="stats__request text-center">
-                    <button class="button">Оставить заявку</button>
+                    <button class="button" data-bs-toggle="modal" data-bs-target="#modal-contact">Оставить заявку</button>
                 </div>
             </section>
             <section class="map">
@@ -266,22 +276,22 @@
             <h2 class="customers__title title text-center">Нас выбирают</h2>
             <div class="customers-list">
                 <div class="customers-list__item">
-                    <img src="images/customer-1.png" alt="Customer 1">
+                    <img src="images/customer-1.png" alt="Customer 1" loading="lazy">
                 </div>
                 <div class="customers-list__item">
-                    <img src="images/customer-2.png" alt="Customer 2">
+                    <img src="images/customer-2.png" alt="Customer 2" loading="lazy">
                 </div>
                 <div class="customers-list__item">
-                    <img src="images/customer-3.png" alt="Customer 3">
+                    <img src="images/customer-3.png" alt="Customer 3" loading="lazy">
                 </div>
                 <div class="customers-list__item">
-                    <img src="images/customer-4.png" alt="Customer 4">
+                    <img src="images/customer-4.png" alt="Customer 4" loading="lazy">
                 </div>
                 <div class="customers-list__item">
-                    <img src="images/customer-5.png" alt="Customer 5">
+                    <img src="images/customer-5.png" alt="Customer 5" loading="lazy">
                 </div>
                 <div class="customers-list__item">
-                    <img src="images/customer-1.png" alt="Customer 1">
+                    <img src="images/customer-1.png" alt="Customer 1" loading="lazy">
                 </div>
             </div>
         </div>
@@ -299,9 +309,9 @@
                         <div class="contact-us__phone">+7 911 925 98 05 </div>
                     </div>
                     <div class="contact-us__socials row justify-content-start">
-                        <a href="" class="contact-us__socials-item"><img src="images/vk.svg" width="34" height="34"></a>
-                        <a href="" class="contact-us__socials-item"><img src="images/tg.svg" width="34" height="34"></a>
-                        <a href="" class="contact-us__socials-item"><img src="images/star.svg" width="34" height="34"></a>
+                        <a href="" class="contact-us__socials-item"><img src="images/vk.svg" width="34" height="34" loading="lazy"></a>
+                        <a href="" class="contact-us__socials-item"><img src="images/tg.svg" width="34" height="34" loading="lazy"></a>
+                        <a href="" class="contact-us__socials-item"><img src="images/star.svg" width="34" height="34" loading="lazy"></a>
                     </div>
                 </div>
                 <div class="col-7">
@@ -311,12 +321,12 @@
                             <div class="col"><input type="text" class="input" placeholder="Имя" required maxlength="10"></div>
                             <div class="col"><input type="tel" class="input" placeholder="Телефон" required></div>
                         </div>
-                        <div class="row form__row">
-                            <div class="col"><textarea name="message" class="input" placeholder="Сообщение"></textarea></div>
+                        <div class="row form__row form__row--mb">
+                            <div class="col"><textarea name="message" class="input" placeholder="Сообщение" rows="3"></textarea></div>
                         </div>
-                        <div class="row justify-content-between align-items-center form__row form__row--button">
+                        <div class="row justify-content-between align-items-center form__row">
                             <div class="col"><button class="button button--block">Отправить</button></div>
-                            <div class="col form__agreement">Оставляя данные, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></div>
+                            <div class="col form__agreement">Оставляя данные, вы соглашаетесь <nobr>с <a href="#">политикой конфиденциальности</a></nobr></div>
                         </div>
                     </div>
                 </div>
@@ -328,8 +338,8 @@
             <div class="footer__bg-icon bg-icon bg-icon--racket"></div>
             <div class="footer__bg-icon bg-icon bg-icon--ball"></div>
             <div class="row justify-content-between footer__first-row">
-                <div class="col">
-                    <img class="footer__logo logo" src="images/logo.svg" alt="Logo">
+                <div class="col footer__logo-col">
+                    <img class="footer__logo logo" src="images/logo.svg" alt="Logo" loading="lazy">
                 </div>
                 <div class="col-auto footer__address">
                     ООО «Корпоративный Петербург»<br>
@@ -352,16 +362,38 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal structure -->
+    <div class="modal fade" id="modal-contact" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+
+            <div class="popup modal-content">
+
+                <button class="popup__close" data-bs-dismiss="modal"><svg class="popup__close-icon"><use href="#icon-close"></use></svg></button>
+
+                <div class="form">
+                    <div class="row text-center form__row form__title form__row--mb">Напишите нам, чтобы обсудить проект</div>
+                    <div class="row form__row">
+                        <div class="col"><input type="text" class="input" placeholder="Имя" required maxlength="10"></div>
+                    </div>
+                    <div class="row form__row">
+                        <div class="col"><input type="tel" class="input" placeholder="Телефон" required></div>
+                    </div>
+                    <div class="row form__row form__row--mb">
+                        <div class="col"><textarea name="message" class="input" placeholder="Сообщение" rows="3"></textarea></div>
+                    </div>
+                    <div class="row align-items-center form__row">
+                        <div class="col"><button class="button button--block">Отправить</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col form__agreement text-center">Оставляя данные, вы соглашаетесь <nobr>с <a href="#">политикой конфиденциальности</a></nobr></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 <script src="./js/main.js"></script>
 </html>
-<!-- 
-
-HTML Layout Author:
-
-Andrey Zhelezko
-EMail: because.ahaha@gmail.com
-Telegram: https://t.me/becauseahaha
-GitHub: https://github.com/becauseahaha
-
--->
